@@ -1,42 +1,69 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Base styles */
+.app-container {
   text-align: center;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #022409;
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.main-content {
+  margin-top: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.audio-controls {
+  margin: 40px 0;
+}
+
+.record-btn {
+  padding: 15px 35px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.record-btn.recording {
+  background: linear-gradient(45deg, #21D4FD, #B721FF);
+}
+
+.record-btn:hover {
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.sound-wave {
+  width: 100%;
+  height: 200px;
+  margin-top: 40px;
+  border-radius: 15px;
+  box-shadow: inset 0 6px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+    margin: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .record-btn {
+    padding: 10px 20px;
+    font-size: 16px;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .sound-wave {
+    height: 120px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
